@@ -68,6 +68,7 @@ INSTALLED_APPS = [
     "payroll",
     "widget_tweaks",
     "django_apscheduler",
+    "admin_overrides"
 ]
 APSCHEDULER_DATETIME_FORMAT = "N j, Y, f:s a"
 
@@ -160,6 +161,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 STATIC_URL = "static/"
 STATIC_ROOT = BASE_DIR / "staticfiles"
+STATIC_ROOT1 = BASE_DIR / "static"
 
 STATICFILES_DIRS = [
     BASE_DIR / "static",

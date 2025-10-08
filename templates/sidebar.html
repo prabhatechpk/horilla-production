@@ -138,8 +138,10 @@ function initializeSummernote(candId,searchWords,) {
           <span>{% trans "Dashboard" %}</span>
         </a>
       </li>
+      
       {% for menues in sidebar %}
-      <li
+        {% if menues.menu != 'Recruitment' and menues.menu != 'Payroll' and menues.menu != 'Performance' and menues.menu != 'Assets' and  menues.menu != 'Help Desk' and  menues.menu != 'Project' %}
+        <li
         class="oh-sidebar__menu-item"
         x-data="{ isOpen: getOpenState('{{menues.app}}GenericNav') }"
       >
@@ -183,7 +185,8 @@ function initializeSummernote(candId,searchWords,) {
               {% endfor %}
           </ul>
         </div>
-      </li>
+        </li>
+        {% endif %}
       {% endfor %}
 
       {% if request.user|config_perms %}
