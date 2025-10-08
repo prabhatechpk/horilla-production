@@ -140,7 +140,7 @@ function initializeSummernote(candId,searchWords,) {
       </li>
       
       {% for menues in sidebar %}
-        {% if menues.menu != 'Recruitment' and menues.menu != 'Payroll' and menues.menu != 'Performance' and menues.menu != 'Assets' and  menues.menu != 'Help Desk' and  menues.menu != 'Project' %}
+        {% if menues.menu != 'Performance' and menues.menu != 'Assets' and  menues.menu != 'Help Desk' and  menues.menu != 'Project' %}
         <li
         class="oh-sidebar__menu-item"
         x-data="{ isOpen: getOpenState('{{menues.app}}GenericNav') }"
